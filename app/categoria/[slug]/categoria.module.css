@@ -1,0 +1,136 @@
+/* ===== BASE ===== */
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 20px 16px 60px;
+}
+
+/* Volver */
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #0b1f2a;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.backBtn:hover {
+  text-decoration: underline;
+}
+
+/* Título */
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ===== SUBCATEGORÍAS ===== */
+.subcategorias {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.subBtn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background: #0b1f2a;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+.subBtn:hover {
+  background: #123140;
+}
+
+/* ===== GRID PRODUCTOS ===== */
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.card span {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Botón */
+.card button {
+  margin-top: auto;
+  padding: 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #c79a3b, #b68b2e);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-transform: lowercase;
+}
+.card button:hover {
+  opacity: 0.9;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .card p {
+    font-size: 15px;
+  }
+
+  .card span {
+    font-size: 16px;
+  }
+
+  .backBtn {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}

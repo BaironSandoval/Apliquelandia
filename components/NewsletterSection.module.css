@@ -1,0 +1,91 @@
+.section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f3f3f3;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #c49a3a;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  margin: 0 auto 28px;
+  max-width: 340px;
+  line-height: 1.5;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.images img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid #ad8033;
+  border-radius: 4px;
+}
+
+/* BOTÓN */
+.button {
+  background-color: #ffffff;
+  color: #ad8033;
+  border: 2px solid #ad8033;
+  border-radius: 24px;
+  padding: 12px 28px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.button:hover {
+  background-color: #ad8033;
+  color: #ffffff;
+}
+
+/* ================= DESKTOP ================= */
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 80px 20px;
+  }
+
+  .badge {
+    font-size: 15px;
+    padding: 10px 22px;
+  }
+
+  .description {
+    font-size: 16px;
+    max-width: 520px;
+    margin-bottom: 36px;
+  }
+
+  .images {
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  .images img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 14px 36px;
+  }
+}

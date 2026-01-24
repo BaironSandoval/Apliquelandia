@@ -1,0 +1,99 @@
+.novedades{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.novedades-title{
+  font-size:28px;
+  letter-spacing:2px;
+  margin-bottom:60px;
+}
+
+.carousel{
+  width:100%;
+  margin:0 auto;
+  overflow:hidden;
+}
+
+.track{
+  display:flex;
+  --step:100%;
+}
+
+/* ===== BASE (MOBILE FIRST) ===== */
+.card{
+  min-width:100%;
+  transform:scale(1);
+  opacity:1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper{
+  position:relative;
+  width:80%;
+  height:260px;
+  background:#f3f3f3;
+  border-radius:16px;
+  overflow:hidden;
+}
+
+.card-content{
+  padding:16px;
+}
+
+.product-name{
+  font-size:16px;
+}
+
+.product-price{
+  font-weight:600;
+}
+
+.product-button{
+  margin-top:12px;
+  background:#fff;
+  color:#b58b38;
+  border:none;
+  padding:10px 28px;
+  border-radius:20px;
+  border: 1px solid #b58b38;
+  font-size:12px;
+  cursor:pointer;
+}
+.product-button:hover{
+  background:#b58b38;
+  color:#fff;
+  transition:background .3s, color .3s;
+}
+/* ===== TABLET (2 visibles) ===== */
+@media (min-width:768px){
+  .carousel{max-width:600px}
+  .card{min-width:50%}
+  .track{--step:50%}
+}
+
+/* ===== DESKTOP (3 visibles Apple TV) ===== */
+@media (min-width:1024px){
+  .carousel{max-width:900px}
+
+  .card{
+    min-width:33.33%;
+    padding:0 12px;
+    transform:scale(.85);
+    opacity:.35;
+    transition:transform .6s, opacity .6s;
+  }
+
+  .card.active{
+    transform:scale(1);
+    opacity:1;
+  }
+
+  .track{--step:33.33%}
+  .image-wrapper{
+      width:100%;
+  }
+}

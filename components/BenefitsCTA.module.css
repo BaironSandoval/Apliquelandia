@@ -1,0 +1,88 @@
+.section {
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 320px;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit p {
+  width: 250px;
+  font-size: 14px;
+  color: #333;
+}
+
+.button {
+  width: 250px;
+  background-color: #0b1f2a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1024px) {
+  .section {
+    padding: 80px 40px;
+    gap: 40px;
+  }
+
+  .benefits {
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  .benefit p {
+    font-size: 16px;
+  }
+
+  .button {
+    margin-top: 20px; /* queda debajo */
+    font-size: 16px;
+    padding: 18px 48px;
+    width: auto;
+    background-color: transparent;
+    color: #0b1c26;
+    border: 1px solid #0b1c26;
+    width: 160px;
+    padding: 10px 0px;
+    font-size: 14px;
+    transition: 0.3s;
+    transform: none;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+  .button:hover {
+    background: #0b1c26;
+    color: #fff;
+    transform: none;
+  }
+}

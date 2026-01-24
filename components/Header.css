@@ -1,0 +1,44 @@
+.header {
+  height: 56px;
+  padding: 0 16px;
+  background-color: #0B1F2A;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo,
+.mensaje {
+  font-size: 13px;
+  color: #FFFFFF;
+}
+.menu-button {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-button svg {
+  display: block;
+}
+.btn-logo,
+.btn-mensaje {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+/* Ocultar header mobile en desktop */
+@media (min-width: 1024px) {
+  .header {
+    display: none;
+  }
+}
