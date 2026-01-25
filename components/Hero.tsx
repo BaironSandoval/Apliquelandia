@@ -20,7 +20,7 @@ const Hero = () => {
       {/* Imagen central */}
       <div className="hero-image-wrapper">
         <Image
-          src="/imageHome.png" // cambia por tu imagen
+          src="/imageHer.png" // cambia por tu imagen
           alt="Elegancia que se aplica"
           fill
           priority
