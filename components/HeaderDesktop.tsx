@@ -19,7 +19,7 @@ export default function HeaderDesktop() {
       {/* Navegación */}
       <nav className="nav">
         <Link href="/" className="logo">
-        <Image src="/logoSinFondo.png" alt="Apliquelandia" width={30} height={24} />
+        <img src="/logoSinFondo.png" alt="Apliquelandia" width={30} height={24} />
       </Link>
         <Link href="/sublimacion" className="a">Sublimación</Link>
         <Link href="/impresionDtf" className="a">Impresión DTF</Link>
