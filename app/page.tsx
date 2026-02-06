@@ -1,5 +1,3 @@
-import BenefitsCTA from "@/components/BenefitsCTA";
-import CategoriesSection from "@/components/CategorySection";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Sublimacion from "./sublimacion/page";
@@ -25,15 +23,8 @@ export default function Home() {
         <GrabadoLaser />
         <ApliquePedreria />
         <CombinacionTecnicas />
-        {/* <NovedadesCarousel /> */}
-        {/* <CategoriesSection /> */}
-        {/* <ServicesSection /> */}
-        {/* <NewsletterSection /> */}
-        {/* <BenefitsCTA /> */}
         <Footer />
-      </section>
-
-      
+      </section>      
     </div>
   );
 }
