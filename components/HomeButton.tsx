@@ -6,7 +6,7 @@ import styles from "./BackButton.module.css";
 export default function HomeButton({ label = "← Inicio" }) {
 
   return (
-    <Link href="/" className="box">
+    <Link href="/">
       <button className={styles.backBtn}>
         {label}
       </button>

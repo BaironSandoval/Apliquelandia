@@ -1,6 +1,9 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import HomeButton from "@/components/HomeButton";
+import BotonWhatsapp from "@/components/BotonWhatsapp";
+import Link from "next/link";
 import "./page.css";
 
 export default function CombinacionTecnicas() {
@@ -9,6 +12,9 @@ export default function CombinacionTecnicas() {
   return (
     <section className="combinacionTecnicas">
       <div className="overlay">
+        {
+          isDetalle && <HomeButton label="← Ir a Inicio" />
+        }
         <h1 className="titulo">Combinación de Técnicas</h1>
         <p className="descripcion">
           Impresiones duraderas, colores vivos y acabado profesional que no se
@@ -17,9 +23,11 @@ export default function CombinacionTecnicas() {
 
         <div className="acciones">
           {!isDetalle && (
-            <button className="btn info">Más información</button>
+            <Link href="/combinacionTecnicas">
+              <button className="btn info">Más información</button>
+            </Link>
           )}
-          <button className="btn contratar">Contratar</button>
+          <BotonWhatsapp servicio="combinación de técnicas" className="btn contratar" />
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import HomeButton from "@/components/HomeButton";
+import BotonWhatsapp from "@/components/BotonWhatsapp";
 import "./page.css";
 
 export default function Sublimacion() {
@@ -28,8 +29,7 @@ export default function Sublimacion() {
               <button className="btn info">Más información</button>
             </Link>
           )}
-
-          <button className="btn contratar">Contratar</button>
+          <BotonWhatsapp servicio="sublimación" className="btn contratar" />
         </div>
       </div>
     </section>

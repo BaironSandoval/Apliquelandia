@@ -55,7 +55,7 @@ export default function ProductoPage() {
           </div>
 
           <a href={urlWhatsapp} target="_blank">
-            <button className={styles.mainBtnP}>
+            <button className="btn contratar">
               {cantidad ? "COTIZAR AHORA" : "COMPRAR AHORA"}
             </button>
           </a>

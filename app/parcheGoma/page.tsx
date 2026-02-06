@@ -2,6 +2,9 @@
 
 import { usePathname } from "next/navigation";
 import "./page.css";
+import HomeButton from "@/components/HomeButton";
+import BotonWhatsapp from "@/components/BotonWhatsapp";
+import Link from "next/link";
 
 export default function ParcheGoma() {
   const pathname = usePathname();
@@ -9,6 +12,9 @@ export default function ParcheGoma() {
   return (
     <section className="parcheGoma">
       <div className="overlay">
+        {
+          isDetalle && <HomeButton label="← Ir a Inicio" />
+        }
         <h1 className="titulo">Parche en Goma</h1>
         <p className="descripcion">
           Impresiones duraderas, colores vivos y acabado profesional que no se
@@ -17,9 +23,11 @@ export default function ParcheGoma() {
 
         <div className="acciones">
           {!isDetalle && (
-            <button className="btn info">Más información</button>
+            <Link href="/parcheGoma">
+              <button className="btn info">Más información</button>
+            </Link>
           )}
-          <button className="btn contratar">Contratar</button>
+          <BotonWhatsapp servicio="parche en goma" className="btn contratar" />
         </div>
       </div>
     </section>

@@ -42,13 +42,14 @@
   padding: 8px 16px;
   border-radius: 999px;
   border: none;
-  background: #0b1f2a;
-  color: #fff;
+  background: #fff;
+  color: #0b1f2a;
   font-size: 13px;
   cursor: pointer;
 }
 .subBtn:hover {
-  background: #123140;
+  background: #0b1f2a;
+  color: #fff;
 }
 
 /* ===== GRID PRODUCTOS ===== */

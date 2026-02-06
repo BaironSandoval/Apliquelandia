@@ -2,6 +2,9 @@
 
 import { usePathname } from "next/navigation";
 import "./page.css";
+import Link from "next/link";
+import HomeButton from "@/components/HomeButton";
+import BotonWhatsapp from "@/components/BotonWhatsapp";
 
 export default function Dtf() {
   const pathname = usePathname();
@@ -9,6 +12,9 @@ export default function Dtf() {
   return (
     <section className="dtf">
       <div className="overlay">
+        {
+          isDetalle && <HomeButton label="← Ir a Inicio" />
+        }
         <h1 className="titulo">Impresión DTF</h1>
         <p className="descripcion">
           Impresiones duraderas, colores vivos y acabado profesional que no se
@@ -17,9 +23,11 @@ export default function Dtf() {
 
         <div className="acciones">
           {!isDetalle && (
-            <button className="btn info">Más información</button>
+            <Link href="/impresionDtf">
+              <button className="btn info">Más información</button>
+            </Link>
           )}
-          <button className="btn contratar">Contratar</button>
+          <BotonWhatsapp servicio="impresión DTF" className="btn contratar" />
         </div>
       </div>
     </section>

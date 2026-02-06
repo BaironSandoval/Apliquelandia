@@ -45,7 +45,7 @@ export default async function CategoriaPage({
             <span>${producto.precio}</span>
 
             <Link href={`/producto/${producto.slug}`}>
-              <button>ver producto</button>
+              <button className="btn contratar">ver producto</button>
             </Link>
           </div>
         ))}

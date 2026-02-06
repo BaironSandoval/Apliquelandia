@@ -1,4 +1,5 @@
 "use client";
+import HomeButton from "@/components/HomeButton";
 import "./CategorySection.css";
 import Link from "next/link";
 
@@ -6,6 +7,7 @@ export default function CategoriesSection() {
   return (
     <section className="section">
       <div className="overlayC">
+        <HomeButton label="← Ir a Inicio" />
         <h2 className="title">CATEGORIAS</h2>
 
         <div className="grid">

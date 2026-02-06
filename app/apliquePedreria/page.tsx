@@ -2,6 +2,9 @@
 
 import "./page.css";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import HomeButton from "@/components/HomeButton";
+import BotonWhatsapp from "@/components/BotonWhatsapp";
 
 export default function ApliquePedreria() {
     const pathname = usePathname();
@@ -9,6 +12,9 @@ export default function ApliquePedreria() {
   return (
     <section className="apliquePedreria">
       <div className="overlay">
+        {
+          isDetalle && <HomeButton label="← Ir a Inicio" />
+        }
         <h1 className="titulo">Aplique con Pedrería</h1>
         <p className="descripcion">
           Impresiones duraderas, colores vivos y acabado profesional que no se
@@ -17,9 +23,12 @@ export default function ApliquePedreria() {
 
         <div className="acciones">
           {!isDetalle && (
-            <button className="btn info">Más información</button>
+            <Link href="/apliquePedreria">
+              <button className="btn info">Más información</button>
+            </Link>
           )}
-          <button className="btn contratar">Contratar</button>
+          <BotonWhatsapp servicio="aplique con pedrería" className="btn contratar" />
+          
         </div>
       </div>
     </section>

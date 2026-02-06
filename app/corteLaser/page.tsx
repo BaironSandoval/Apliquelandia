@@ -1,6 +1,9 @@
 "use client";
 
 import { usePathname } from "next/navigation"
+import HomeButton from "@/components/HomeButton";
+import Link from "next/link";
+import BotonWhatsapp from "@/components/BotonWhatsapp";
 import "./page.css";
 
 export default function CorteLaser() {
@@ -9,6 +12,9 @@ export default function CorteLaser() {
   return (
     <section className="corteLaser">
       <div className="overlay">
+        {
+          isDetalle && <HomeButton label="← Ir a Inicio" />
+        }
         <h1 className="titulo">Corte Láser</h1>
         <p className="descripcion">
           Impresiones duraderas, colores vivos y acabado profesional que no se
@@ -17,9 +23,11 @@ export default function CorteLaser() {
 
         <div className="acciones">
           {!isDetalle && (
-            <button className="btn info">Más información</button>
+            <Link href="/corteLaser">
+              <button className="btn info">Más información</button>
+            </Link>
           )}
-          <button className="btn contratar">Contratar</button>
+          <BotonWhatsapp servicio="corte láser" className="btn contratar" />
         </div>
       </div>
     </section>
