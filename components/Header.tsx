@@ -31,7 +31,7 @@ export default function Header() {
           aria-label="/Ir a inicio"
           onClick={() => (window.location.href = "/")}
         >
-          <Image src="/logoSinFondo.png" alt="Apliquelandia" width={46} height={37} />
+          <Image src="/logoSinFondoClaro.png" alt="Apliquelandia" width={46} height={37} />
         </button>
 
         <a href={urlWhatsapp} target="_blank">
