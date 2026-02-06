@@ -1,6 +1,7 @@
 import { productos } from "@/app/data/productos";
 import { SUBCATEGORIAS } from "@/app/data/categorias";
 import Link from "next/link";
+import BackButton from "@/components/BackButton";
 import styles from "./categoria.module.css";
 
 export default async function CategoriaPage({
@@ -12,14 +13,16 @@ export default async function CategoriaPage({
 
   const subcategorias = SUBCATEGORIAS[slug];
 
-  const productosFiltrados = productos.filter((p) => p.categoria === slug);
+  // 👉 si hay subcategorías, mostrar productos de TODAS esas subcategorías
+  const productosFiltrados = subcategorias
+    ? productos.filter((p) =>
+        subcategorias.some((sub) => sub.slug === p.categoria)
+      )
+    : productos.filter((p) => p.categoria === slug);
 
   return (
     <div className={styles.container}>
-      
-      <Link href="/">
-        <button className={styles.backBtn}>← Volver</button>
-      </Link>
+      <BackButton />
       <h1 className={styles.title}>CATEGORÍA</h1>
 
       {/* SUBCATEGORÍAS */}
@@ -42,7 +45,7 @@ export default async function CategoriaPage({
             <span>${producto.precio}</span>
 
             <Link href={`/producto/${producto.slug}`}>
-              <button>VER PRODUCTO</button>
+              <button>ver producto</button>
             </Link>
           </div>
         ))}

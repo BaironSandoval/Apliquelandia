@@ -1,6 +1,11 @@
+"use client";
+
+import { usePathname } from "next/navigation"
 import "./page.css";
 
 export default function CorteLaser() {
+  const pathname = usePathname();
+  const isDetalle = pathname === "/corteLaser";
   return (
     <section className="corteLaser">
       <div className="overlay">
@@ -11,7 +16,9 @@ export default function CorteLaser() {
         </p>
 
         <div className="acciones">
-          <button className="btn info">Más información</button>
+          {!isDetalle && (
+            <button className="btn info">Más información</button>
+          )}
           <button className="btn contratar">Contratar</button>
         </div>
       </div>

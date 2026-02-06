@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import HomeButton from "@/components/HomeButton";
 import "./page.css";
 
 export default function Sublimacion() {
@@ -11,6 +12,10 @@ export default function Sublimacion() {
   return (
     <section className="sublimacion">
       <div className="overlay">
+        {
+          isDetalle && <HomeButton label="← Ir a Inicio" />
+        }
+        
         <h1 className="titulo">Sublimación</h1>
         <p className="descripcion">
           Impresiones duraderas, colores vivos y acabado profesional que no se

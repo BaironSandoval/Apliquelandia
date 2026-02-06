@@ -3,6 +3,7 @@
 import { useParams } from "next/navigation";
 import { productos } from "@/app/data/productos";
 import { useState } from "react";
+import BackButton from "@/components/BackButton";
 import Link from "next/link";
 import styles from "./product.module.css";
 
@@ -24,9 +25,7 @@ export default function ProductoPage() {
 
   return (
     <div className={styles.container}>
-      <Link href="/">
-        <button className={styles.backBtn}>← Volver</button>
-      </Link>
+      <BackButton />
 
       <div className={styles.layout}>
         <div className={styles.imageBox}>

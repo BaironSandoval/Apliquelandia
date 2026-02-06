@@ -1,0 +1,23 @@
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #0b1f2a;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.backBtn:hover {
+  text-decoration: underline;
+}
+@media (min-width: 1024px) {
+  .backBtn {
+    font-size: 14px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
+}

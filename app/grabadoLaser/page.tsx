@@ -1,6 +1,11 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import "./page.css";
 
 export default function GrabadoLaser() {
+  const pathname = usePathname();
+  const isDetalle = pathname === "/grabadoLaser";
   return (
     <section className="grabadoLaser">
       <div className="overlay">
@@ -11,7 +16,9 @@ export default function GrabadoLaser() {
         </p>
 
         <div className="acciones">
-          <button className="btn info">Más información</button>
+          {!isDetalle && (
+            <button className="btn info">Más información</button>
+          )}
           <button className="btn contratar">Contratar</button>
         </div>
       </div>

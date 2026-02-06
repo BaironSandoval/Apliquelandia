@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import Catalogo from "../app/catalogo/page";
 import "./HeaderDesktop.css";
 
 export default function HeaderDesktop() {
