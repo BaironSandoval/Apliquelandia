@@ -5,21 +5,13 @@ import Image from "next/image";
 import "./HeaderDesktop.css";
 
 export default function HeaderDesktop() {
-  const telefono = "573209908045";
-  const mensaje = "Hola, estoy interesad@ en sus productos";
-  const urlWhatsapp = `https://wa.me/${telefono}?text=${encodeURIComponent(
-    mensaje
-  )}`;
-
   return (
     <header className="header-desktop">
-      {/* Logo */}
-      
 
       {/* Navegación */}
       <nav className="nav">
         <Link href="/" className="logo">
-        <img src="/logoSinFondo.png" alt="Apliquelandia" width={30} height={24} />
+        <Image src="/logoSinFondo.png" alt="Apliquelandia" width={30} height={24} />
       </Link>
         <Link href="/sublimacion" className="a">Sublimación</Link>
         <Link href="/impresionDtf" className="a">Impresión DTF</Link>
