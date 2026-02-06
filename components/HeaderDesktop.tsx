@@ -2,53 +2,36 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import Catalogo from "../app/catalogo/page";
 import "./HeaderDesktop.css";
 
 export default function HeaderDesktop() {
   const telefono = "573209908045";
   const mensaje = "Hola, estoy interesad@ en sus productos";
   const urlWhatsapp = `https://wa.me/${telefono}?text=${encodeURIComponent(
-    mensaje,
+    mensaje
   )}`;
 
   return (
     <header className="header-desktop">
-      <Link href="/" className="logo">
-        <Image src="/logo.png" alt="Apliquelandia" width={30} height={24} />
-      </Link>
+      {/* Logo */}
+      
 
+      {/* Navegación */}
       <nav className="nav">
-        <Link href="/categoria/mujeres">Mujeres</Link>
-        <Link href="/categoria/hombres">Hombres</Link>
-
-        <div className="dropdown">
-          <span>Infantil</span>
-          <div className="dropdown-menu">
-            <Link href="/categoria/infantil-ninas">Niñas</Link>
-            <Link href="/categoria/infantil-ninos">Niños</Link>
-            <Link href="/categoria/bebes">Bebés</Link>
-          </div>
-        </div>
-
-        <div className="dropdown">
-          <span>Temporadas</span>
-          <div className="dropdown-menu">
-            <Link href="/categoria/navidad">Navidad</Link>
-          </div>
-        </div>
+        <Link href="/" className="logo">
+        <Image src="/logoSinFondo.png" alt="Apliquelandia" width={30} height={24} />
+      </Link>
+        <Link href="/sublimacion" className="a">Sublimación</Link>
+        <Link href="/impresionDtf" className="a">Impresión DTF</Link>
+        <Link href="/corteLaser" className="a">Corte láser</Link>
+        <Link href="/parcheGoma" className="a">Parche en goma</Link>
+        <Link href="/bordadoComputarizado" className="a">Bordados computarizado</Link>
+        <Link href="/grabadoLaser" className="a">Grabado láser</Link>
+        <Link href="/apliquePedreria" className="a">Aplique con pedrería</Link>
+        <Link href="/combinacionTecnicas" className="a">Combinación de técnicas</Link>
+        <Link href="/categoria" className="a">Catálogo</Link>
       </nav>
-
-      <a href={urlWhatsapp} target="_blank">
-        <button className="btn-mensaje" aria-label="Ir a mensajes">
-          <Image
-            className="mensaje"
-            src="/mensaje.svg"
-            alt="Mensajes"
-            width={20}
-            height={20}
-          />
-        </button>
-      </a>
     </header>
   );
 }

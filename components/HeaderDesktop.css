@@ -9,24 +9,42 @@
     align-items: center;
     justify-content: space-between;
     height: 44px;
-    background: #0b1f2a;
-    border-bottom: 1px solid #eee;
-    padding: 0 60px;
+    background: #ffffff;
+    padding: 0 10px;
+    opacity: 0.95;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
   }
 
   .nav {
     display: flex;
     align-items: center;
-    gap: 32px;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
   }
-
+  .a:hover {
+    color: #143447;
+    text-decoration-line: underline;
+  }
   .nav a,
   .dropdown span {
     text-decoration: none;
-    color: #ffffff;
+    color: #0b1f2a;
     font-size: 12px;
     letter-spacing: 1px;
     cursor: pointer;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 100;
+        font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: 1;
   }
 
   .dropdown {

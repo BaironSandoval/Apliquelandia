@@ -12,13 +12,14 @@ const Hero = () => {
   return (
     <section className="hero">
       {/* Título superior */}
-      <h1 className="hero-title">APLIQUELANDIA</h1>
+      <h1 className="hero-title">Fabricamos apliques textiles</h1>
       {/* Botón inferior */}
+      <p className="hero-p">Porque el detalle define el valor, producimos apliques que transforman prendas comunes en piezas con carácter, cuidando el proceso, el acabado y cada detalle desde el inicio.</p>
       <a href={urlWhatsapp} target="_blank">
-        <button className="hero-button">CONTACTANOS</button>
+        <button className="hero-button">Cotizar mi proyecto</button>
       </a>
       {/* Imagen central */}
-      <div className="hero-image-wrapper">
+      {/* <div className="hero-image-wrapper">
         <Image
           src="/imageHer.png" // cambia por tu imagen
           alt="Elegancia que se aplica"
@@ -28,7 +29,7 @@ const Hero = () => {
         />
 
         
-      </div>
+      </div> */}
     </section>
   );
 };

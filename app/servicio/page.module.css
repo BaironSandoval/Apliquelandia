@@ -2,15 +2,18 @@
 
 .section {
   padding: 40px 20px;
-  background-color: #ffffff;
+  background-color: #f3f3f3;
 }
 
 .title {
+  padding-top: 50px;
+  margin-bottom: 32px;
   text-align: center;
   font-size: 28px;
-  margin-bottom: 32px;
   color: #1a1a1a;
   letter-spacing: 2px;
+  font-weight: 200;
+  font-family: serif;
 }
 
 /* ================= LIST ================= */
@@ -111,8 +114,7 @@
 
 @media (min-width: 1024px) {
   .title {
-    font-size: 42px;
-    margin-bottom: 48px;
+    font-size: 60px;
   }
 
   .list {
@@ -125,14 +127,14 @@
 
   .card {
     max-width: none;
-    height: 320px;
+    height: 80vh;
   }
 
     /* La quinta card ocupa toda la fila */
-  .card:nth-child(5) {
+  /* .card:nth-child(5) {
     grid-column: 1 / -1;
     height: 380px;
-  }
+  } */
 
   .text {
     font-size: 28px;

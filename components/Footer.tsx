@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.logo}>
-        <img src="/logo.png" alt="Apliquelandia" />
+        <img src="/logoOscuro.png" alt="Apliquelandia" />
         <span>APLIQUELANDIA</span>
       </div>
 

@@ -1,20 +1,30 @@
 .hero {
   width: 100%;
-  height: 80vh;
-  padding: 30px 0;
+  height: 60vh;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   align-items: center;
-  justify-content: space-around;
-  background: #fff;
+  justify-content: start;
+  gap: 20px;
+  background: #f3f3f3;
 }
 .hero-title {
-  font-family: "Times New Roman", serif;
+  font-family: serif;
   font-weight: 100;
   font-size: 30px;
   letter-spacing: 4px;
   color: #1f2d3a;
+  text-align: center;
+  padding-top: 100px;
+}
+.hero-p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: #1f2d3a;
+  max-width: 350px;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0 10px;
 }
 .hero-image-wrapper {
   position: relative;
@@ -74,13 +84,20 @@
 }
 @media (min-width: 1024px) {
   .hero {
-    height: 100vh;
-    padding: 60px 0;
+    height: 80vh;
+    padding: 60px 0 30px;
     gap: 40px;
   }
   .hero-title {
-    font-size: 56px;
+    font-size: 70px;
     letter-spacing: 6px;
+  }
+  .hero-p {
+    font-size: 20px;
+    max-width: 700px;
+    text-align: center;
+    line-height: 1.25;
+    margin: 0 20px;
   }
   .hero-image-wrapper {
     max-width: 1400px;
@@ -94,8 +111,8 @@
     background-color: transparent;
     color: #0b1c26;
     border: 1px solid #0b1c26;
-    width: 150px;
-    padding: 10px 0px;
+    width: 160px;
+    padding: 10px 5px;
     font-size: 14px;
     transition: 0.3s;
     transform: none;

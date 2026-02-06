@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import styles from "./ServicesSection.module.css";
+import styles from "./page.module.css";
 
 const services = [
   {
@@ -29,7 +29,13 @@ const services = [
       "Combinación de técnicas para crear diseños únicos con textura, volumen y gran impacto visual.",
   },
   {
-    title: "PEDRERÍA Y PARCHES EN GOMA",
+    title: "PEDRERÍA",
+    image: "/servicio-parches-goma.png",
+    description:
+      "Aplicaciones decorativas que destacan por su brillo y relieve. Perfectas para moda y personalización exclusiva.",
+  },
+  {
+    title: "PARCHES EN GOMA",
     image: "/servicio-parches-goma.png",
     description:
       "Aplicaciones decorativas que destacan por su brillo y relieve. Perfectas para moda y personalización exclusiva.",
@@ -46,7 +52,7 @@ export default function ServicesSection() {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Nuestros servicios</h2>
+      <h2 className={styles.title}>Lo que hacemos por ti</h2>
 
       <div className={styles.list}>
         {services.map((service) => (
