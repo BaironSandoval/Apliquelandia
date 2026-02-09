@@ -34,7 +34,7 @@ export default function GrabadoLaser() {
         {/* IMAGEN */}
       <div className="imagen-wrapper">
         <Image
-          src="/grabadolaserD.png"
+          src="/grabadolaserDe.png"
           alt="Máquina de grabado láser"
           width={1100}
           height={500}
