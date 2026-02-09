@@ -1,28 +1,33 @@
 .apliquePedreria {
   width: 100%;
-  min-height: 100vh;
-  background-image: url("/apliquePedreria.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain; /* CLAVE para no cortar la máquina */
+  background-color: #f3f3f3;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #ffffff; /* fondo limpio tipo Apple */
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
 }
 
 .overlay {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 50vh;
   text-align: center;
   color: #0b1f2a;
   max-width: 720px;
   padding: 0 16px;
 }
+.imagen-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0px 20px;
+}
 
+.imagenApliquePedreria {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+}
 .titulo {
   font-size: 56px;
   font-weight: 700;
@@ -74,11 +79,12 @@
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .apliquePedreria {
-    min-height: 80vh;
-    background-image: url("/apliquePedreria-mobile.png");
-    background-position: bottom center;
-    background-size: contain;
+  .overlay {
+    padding: 48px 16px 24px;
+  }
+  .imagenApliquePedreria {
+    content: url("/apliquePedreria-mobile.png");
+    max-width: 100%;
   }
 
   .titulo {

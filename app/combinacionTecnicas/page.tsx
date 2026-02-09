@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import HomeButton from "@/components/HomeButton";
 import BotonWhatsapp from "@/components/BotonWhatsapp";
 import Link from "next/link";
+import Image from "next/image";
 import "./page.css";
 
 export default function CombinacionTecnicas() {
@@ -29,6 +30,16 @@ export default function CombinacionTecnicas() {
           )}
           <BotonWhatsapp servicio="combinación de técnicas" className="btn contratar" />
         </div>
+      </div>
+      {/* IMAGEN */}
+      <div className="imagen-wrapper">
+        <Image
+          src="/combinacionD.png"
+          alt="Máquina de impresión DTF"
+          width={1100}
+          height={500}
+          className="imagenCombinacionTecnicas"
+         />
       </div>
     </section>
   );

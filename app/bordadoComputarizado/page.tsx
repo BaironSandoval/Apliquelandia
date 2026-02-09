@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import HomeButton from "@/components/HomeButton";
 import BotonWhatsapp from "@/components/BotonWhatsapp";
 import "./page.css";
@@ -29,6 +30,16 @@ export default function BordadoComputarizado() {
           )}
           <BotonWhatsapp servicio="bordado computarizado" className="btn contratar" />
         </div>
+      </div>
+      {/* IMAGEN */}
+      <div className="imagen-wrapper">
+        <Image
+          src="/bordadoraDe.png"
+          alt="Máquina de bordado computarizado"
+          width={1100}
+          height={500}
+          className="imagenBordadoComputarizado"
+         />
       </div>
     </section>
   );

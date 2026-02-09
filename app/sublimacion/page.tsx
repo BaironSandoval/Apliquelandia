@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import HomeButton from "@/components/HomeButton";
 import BotonWhatsapp from "@/components/BotonWhatsapp";
@@ -31,6 +32,16 @@ export default function Sublimacion() {
           )}
           <BotonWhatsapp servicio="sublimación" className="btn contratar" />
         </div>
+      </div>
+        {/* IMAGEN */}
+      <div className="imagen-wrapper">
+        <Image
+          src="/sublimadora.png"
+          alt="Máquina de sublimación"
+          width={1100}
+          height={500}
+          className="imagenSublimacion"
+        />
       </div>
     </section>
   );

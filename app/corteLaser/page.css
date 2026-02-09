@@ -1,26 +1,31 @@
 .corteLaser {
   width: 100%;
-  min-height: 100vh;
-  background-image: url("/corte-laser.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain; /* CLAVE para no cortar la máquina */
+  background-color: #f3f3f3;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #ffffff; /* fondo limpio tipo Apple */
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
 }
-
 .overlay {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 50vh;
   text-align: center;
   color: #0b1f2a;
   max-width: 720px;
   padding: 0 16px;
+}
+.imagen-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0px 20px;
+}
+
+.imagenCorteLaser {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
 }
 
 .titulo {
@@ -52,7 +57,7 @@
 
 .btn.info {
   background: #0b1f2a;
-  color: #ffffff;
+  color: #f3f3f3;
   border: none;
 }
 
@@ -68,19 +73,20 @@
 
 .btn.contratar:hover {
   background: #0b1f2a;
-  color: #ffffff;
+  color: #f3f3f3;
   opacity: none;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .corteLaser {
-    min-height: 90vh;
-    background-image: url("/corte-laser-mobile.png");
-    background-position: bottom center;
-    background-size: contain;
+  .overlay {
+    padding: 48px 16px 24px;
   }
 
+  .imagenCorteLaser {
+    content: url("/corte-laser-mobile.png");
+    max-width: 100%;
+  }
   .titulo {
     font-size: 34px;
   }

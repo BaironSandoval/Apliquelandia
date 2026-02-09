@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation"
 import HomeButton from "@/components/HomeButton";
 import Link from "next/link";
+import Image from "next/image";
 import BotonWhatsapp from "@/components/BotonWhatsapp";
 import "./page.css";
 
@@ -29,6 +30,16 @@ export default function CorteLaser() {
           )}
           <BotonWhatsapp servicio="corte láser" className="btn contratar" />
         </div>
+      </div>
+        {/* IMAGEN */}
+      <div className="imagen-wrapper">
+        <Image
+          src="/corte-laserD.png"
+          alt="Máquina de corte láser"
+          width={1100}
+          height={500}
+          className="imagenCorteLaser"
+        />
       </div>
     </section>
   );

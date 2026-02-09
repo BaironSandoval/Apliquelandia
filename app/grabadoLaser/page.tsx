@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import HomeButton from "@/components/HomeButton";
 import BotonWhatsapp from "@/components/BotonWhatsapp";
 import "./page.css";
@@ -29,6 +30,16 @@ export default function GrabadoLaser() {
           )}
           <BotonWhatsapp servicio="grabado láser" className="btn contratar" />
         </div>
+      </div>
+        {/* IMAGEN */}
+      <div className="imagen-wrapper">
+        <Image
+          src="/grabadolaserD.png"
+          alt="Máquina de grabado láser"
+          width={1100}
+          height={500}
+          className="imagenGrabadoLaser"
+        />
       </div>
     </section>
   );

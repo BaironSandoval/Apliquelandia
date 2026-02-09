@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import "./page.css";
 import HomeButton from "@/components/HomeButton";
 import BotonWhatsapp from "@/components/BotonWhatsapp";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ParcheGoma() {
@@ -29,6 +30,16 @@ export default function ParcheGoma() {
           )}
           <BotonWhatsapp servicio="parche en goma" className="btn contratar" />
         </div>
+      </div>
+        {/* IMAGEN */}
+      <div className="imagen-wrapper">
+        <Image
+          src="/parcheGomaD.png"
+          alt="parche en goma"
+          width={1100}
+          height={500}
+          className="imagenParcheGoma"
+        />
       </div>
     </section>
   );

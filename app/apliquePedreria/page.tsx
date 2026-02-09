@@ -3,6 +3,7 @@
 import "./page.css";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import HomeButton from "@/components/HomeButton";
 import BotonWhatsapp from "@/components/BotonWhatsapp";
 
@@ -28,8 +29,17 @@ export default function ApliquePedreria() {
             </Link>
           )}
           <BotonWhatsapp servicio="aplique con pedrería" className="btn contratar" />
-          
         </div>
+      </div>
+        {/* IMAGEN */}
+      <div className="imagen-wrapper">
+        <Image
+          src="/apliquePedreriaD.png"
+          alt="Aplique con pedrería"
+          width={1100}
+          height={500}
+          className="imagenApliquePedreria"
+        />
       </div>
     </section>
   );
