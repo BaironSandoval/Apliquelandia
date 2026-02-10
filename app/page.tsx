@@ -8,12 +8,14 @@ import BordadoComputarizado from "./bordadoComputarizado/page";
 import GrabadoLaser from "./grabadoLaser/page";
 import ApliquePedreria from "./apliquePedreria/page";
 import CombinacionTecnicas from "./combinacionTecnicas/page";
+import ModalBienvenida from "../components/ModalBienvenida";
 
 export default function Home() {
   return (
     <div className="pt-16">
       {/* HERO */}
       <section className="px-4 py-6">
+        <ModalBienvenida imagenFondo="/modal-bg.jpeg" />
         <Hero />
         <Sublimacion />
         <Dtf />
