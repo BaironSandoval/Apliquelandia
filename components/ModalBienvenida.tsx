@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./ModalBienvenida.css";
 
 type Props = {
@@ -8,7 +8,22 @@ type Props = {
 };
 
 export default function ModalBienvenida({ imagenFondo }: Props) {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const visto = localStorage.getItem("modal-bienvenida");
+
+    if (!visto) {
+      setVisible(true);
+      document.body.style.overflow = "hidden";
+    }
+  }, []);
+
+  const cerrarModal = () => {
+    localStorage.setItem("modal-bienvenida", "true");
+    document.body.style.overflow = "auto";
+    setVisible(false);
+  };
 
   if (!visible) return null;
 
@@ -18,16 +33,15 @@ export default function ModalBienvenida({ imagenFondo }: Props) {
         className="modal-contenido"
         style={{ backgroundImage: `url(${imagenFondo})` }}
       >
-        <button className="modal-cerrar" onClick={() => setVisible(false)}>
+        <button className="modal-cerrar" onClick={cerrarModal}>
           ✕
         </button>
 
         <div className="modal-texto">
           <h1 className="modal-titulo">Estuvimos en Colombiatex 2026</h1>
           <p className="modal-descripcion">
-            Participamos en el evento textil más importante del sector,
-            conociendo nuevas tendencias, tecnologías e innovaciones para
-            ofrecerte lo mejor en apliques y servicios textiles.
+            Conocimos las últimas tendencias e innovaciones del sector textil
+            para seguir ofreciéndote productos de alta calidad.
           </p>
         </div>
       </div>
